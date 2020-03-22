@@ -26,10 +26,10 @@ secret_key_base =
 config :pipsqueak, PipsqueakWeb.Endpoint,
   server: true,
   http: [
-    port: {:system, "PORT"}
+    port: {:system, "PORT"},
     transport_options: [socket_opts: [:inet6]]
   ],
-  url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443]
+  url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443],
   secret_key_base: secret_key_base
 
 # ## Using releases (Elixir v1.9+)
